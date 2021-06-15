@@ -4,6 +4,7 @@ subtitle: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
+rssFullText: true
 author: ""
 authorLink: ""
 description: ""
