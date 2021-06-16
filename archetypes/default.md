@@ -5,8 +5,8 @@ date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
 rssFullText: true
-author: ""
-authorLink: ""
+author: "Blanker"
+authorLink: "https://isaaclin.cn"
 description: ""
 
 tags: []
