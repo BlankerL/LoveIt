@@ -10,12 +10,12 @@
         {{- .Page.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700"  -}}
     </pubDate>
     <author>
-        {{- .params.author | default (T "author") -}}
+        {{- $params.author | default (T "author") -}}
     </author>
     <guid>
         {{- .Page.Permalink -}}
     </guid>
-    <description>
+    <content:encoded>
         {{- "<![CDATA[" | safeHTML -}}
         {{- with $params.featuredimage -}}
             <div class="featured-image">
@@ -32,5 +32,5 @@
         {{- end -}}
         {{- $content | replaceRE `<figure[^>]*>.*</figure>` "" | replaceRE `<img[^>]*( /)?>` "" | safeHTML -}}
         {{- "]]>" | safeHTML -}}
-    </description>
+    </content:encoded>
 </item>
