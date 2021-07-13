@@ -3,16 +3,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        <style>
-            @font-face {
-                font-family: 'Zpix';
-                src: url('./fonts/lib/zpix.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-                url('./fonts/lib/zpix.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-            }
-            html * {
-                font-family: Zpix;
-            }
-        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -23,6 +13,16 @@
 
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
+        <style>
+            @font-face {
+                font-family: 'Zpix';
+                src: url('/lib/fonts/zpix.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+                url('/lib/fonts/zpix.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+            }
+            html * {
+                font-family: Zpix;
+            }
+        </style>
         {{- partial "head/seo.html" . -}}
     </head>
     <body header-desktop="{{ .Site.Params.header.desktopMode }}" header-mobile="{{ .Site.Params.header.mobileMode }}">
