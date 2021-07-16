@@ -14,6 +14,7 @@
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}
         <style>
+            /* Use fancy font for all html elements other than paragraphs */
             @font-face {
                 font-family: 'Zpix';
                 src: url('/lib/fonts/zpix.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -21,6 +22,10 @@
             }
             html * {
                 font-family: Zpix;
+            }
+            /* Use initial font for paragraphs */
+            p {
+                font-family: initial;
             }
         </style>
         {{- partial "head/seo.html" . -}}
