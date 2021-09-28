@@ -17,14 +17,26 @@
             /* Use fancy font for all html elements other than paragraphs */
             @font-face {
                 font-family: 'Zpix';
-                src: url('https://cdn.jsdelivr.net/gh/SolidZORO/zpix-pixel-font@3.1.6/website/zpix.woff2') format('woff2'),
+                src: local('Zpix'),
+                     url('https://cdn.jsdelivr.net/gh/SolidZORO/zpix-pixel-font@3.1.6/website/zpix.woff2') format('woff2'),
                      url('https://cdn.jsdelivr.net/gh/SolidZORO/zpix-pixel-font@3.1.6/dist/zpix.ttf') format('truetype');
             }
-            html * {
-                font-family: Zpix;
+            @font-face {
+                font-family: 'TheGoodMonolith';
+                font-style: normal;
+                font-weight: 500;
+                src: local('TheGoodMonolith'),
+                     url('https://fonts.cdnfonts.com/s/32398/TheGoodMonolith.woff') format('woff');
             }
-            /* Use initial font for paragraphs */
-            a, em, p, li, strong, .mord, .mrel {
+            html:lang(en) {
+                font-family: 'TheGoodMonolith';
+            }
+            html:lang(zh-CN) {
+                font-family: 'Zpix';
+            }
+            /* Use initial font for paragraphs in Chinese */
+            a:lang(zh-CN), em:lang(zh-CN), p:lang(zh-CN),
+            li:lang(zh-CN), strong:lang(zh-CN) {
                 font-family: initial;
             }
         </style>
