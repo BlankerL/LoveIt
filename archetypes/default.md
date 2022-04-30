@@ -6,7 +6,7 @@ lastmod: {{ .Date }}
 draft: true
 rssFullText: true
 author: "Blanker"
-authorLink: "https://isaaclin.cn"
+authorLink: "https://blanker.eth.limo"
 description: ""
 
 tags: []
