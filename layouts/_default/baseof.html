@@ -33,15 +33,24 @@
             html:lang(zh-CN) {
                 font-family: "Zpix", sans-serif;
             }
-            /* Use initial font for paragraphs in Chinese */
+            /* Use initial font for paragraphs in Chinese and English */
             a:lang(zh-CN),
             em:lang(zh-CN),
             p:lang(zh-CN),
             li:lang(zh-CN),
             strong:lang(zh-CN),
             textarea:lang(zh-CN),
-            input:lang(zh-CN) {
-                font-family: sans-serif;
+            input:lang(zh-CN),
+            a:lang(en),
+            em:lang(en),
+            p:lang(en),
+            li:lang(en),
+            strong:lang(en),
+            textarea:lang(en),
+            input:lang(en) {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                    "Helvetica Neue", sans-serif;
             }
         </style>
         {{- partial "head/seo.html" . -}}
